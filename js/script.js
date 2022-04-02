@@ -36,8 +36,8 @@ class App {
 				// TODO:
 				screen = new InfoScreen();
 				// screen = new MainScreen();
-			} else if (user && !user.emailVerified) {
-				screen = new CheckEmailScreen();
+			// } else if (user && !user.emailVerified) {
+			// 	screen = new CheckEmailScreen();
 			} else {
 				screen = new LoginScreen();
 			}

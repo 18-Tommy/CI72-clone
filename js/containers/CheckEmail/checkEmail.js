@@ -35,7 +35,7 @@ class CheckEmailScreen {
         `;
 	}
 	render(appEle) {
-		appEle.appendChild(this.$mainContainer);
+		appEle.appendChild(this.$mailContainer);
 
 		this.$btnMail = document.getElementById('open-gmail');
 		this.$btnMail.addEventListener('click', () => {

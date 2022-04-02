@@ -49,15 +49,15 @@ class LoginScreen {
     this.$google = document.createElement("a");
 
     this.$email = new InputComponent(
-      "Email Address",
+      "Email",
       "email",
-      "login-email",
+      " ",
       "email"
     );
     this.$password = new InputComponent(
       "Password",
       "password",
-      "login-pwd",
+      " ",
       "password"
     );
 

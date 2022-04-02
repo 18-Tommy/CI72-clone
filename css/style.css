@@ -63,20 +63,62 @@ body {
   font-weight: bold;
 }
 
-.form-control {
-  height: 60px;
-  border-radius: 10px;
-}
-.label-input {
-  line-height: 60px;
-  flex: auto;
-  width: 100px;
-}
-.col-4 {
-  display: flex;
-  font-size: 19px;
-  text-align: end;
-}
+
+.text {
+	position: relative;
+	padding: 15px 0 0;
+	margin-top: 10px;
+	width: 100%;
+  }
+  .input {
+	font-family: inherit;
+	width: 100%;
+	border: 0;
+	border-bottom: 2px solid #9b9b9b;
+	outline: 0;
+	font-size: 1rem;
+	color: black;
+	padding: 7px 0;
+	background: transparent;
+	transition: border-color 0.2s;
+  }
+  .input::placeholder {
+	color: transparent;
+  }
+  .input:placeholder-shown ~ .label {
+	font-size: 0.9rem;
+	cursor: text;
+	top: 20px;
+  }
+  .label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 0.9rem;
+	color: #9b9b9b;
+  }
+  .input:focus {
+	padding-bottom: 6px;
+	font-weight: 700;
+	border-width: 3px;
+	border-image: linear-gradient(to right, #11998e, #38ef7d);
+	border-image-slice: 1;
+  }
+  .input:focus ~ .label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 0.9rem;
+	color: #11998e;
+	font-weight: 700;
+  }
+  /* reset input */
+  .input:required, .input:invalid {
+	box-shadow: none;
+  }
+
 .error {
   color: red;
 }

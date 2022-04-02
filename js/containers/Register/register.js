@@ -36,21 +36,21 @@ class RegisterScreen {
     this.$link.addEventListener("click", this.handleChangeScreen);
 
     this.$email = new InputComponent(
-      "Email Address",
+      "Email",
       "email",
-      "login-email",
+      " ",
       "email"
     );
     this.$password = new InputComponent(
       "Password",
       "password",
-      "login-pwd",
+      " ",
       "password"
     );
     this.$rePassword = new InputComponent(
       "Retype Password",
       "rePassword",
-      "rePassword",
+      " ",
       "password"
     );
 

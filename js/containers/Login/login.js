@@ -17,9 +17,10 @@ class LoginScreen {
   $btnSubmit;
   $titleScreen;
 
-  $lableSocial;
+  $labelSocial;
   $socials;
-  $faceBook;
+  $facebook;
+  $imgFaceBook;
   $twitter;
   $google;
 
@@ -40,24 +41,37 @@ class LoginScreen {
     this.$link.innerText = "Create a new account";
     this.$link.addEventListener("click", this.handleChangeScreen);
 
-    this.$lableSocial = document.createElement("span");
+    this.$labelSocial = document.createElement("span");
 
     this.$socials = document.createElement("div");
 
-    this.$faceBook = document.createElement("a");
-    this.$twitter = document.createElement("a");
-    this.$google = document.createElement("a");
+    this.$facebook = document.createElement("a");
+    this.$imgFaceBook = document.createElement("img");
+    this.$imgFaceBook.setAttribute("style", "width: 30px, height: 30px");
+    this.$imgFaceBook.setAttribute("src", "../../../images/facebook.png");
 
-    this.$lableSocial.innerHTML = "Or login with";
+    this.$twitter = document.createElement("a");
+    this.$imgTwitter = document.createElement("img");
+    this.$imgTwitter.setAttribute("style", "width: 30px, height: 30px");
+    this.$imgTwitter.setAttribute("src", "../../../images/twitter.png");
+
+    this.$google = document.createElement("a");
+    this.$imgGoogle = document.createElement("img");
+    this.$imgGoogle.setAttribute("style", "width: 30px, height: 30px");
+    this.$imgGoogle.setAttribute("src", "../../../images/google.png");
+
+    this.$labelSocial.innerHTML = "Or login with";
 
     this.$socials.classList.add("socials");
-    this.$faceBook.innerHTML = '<i class="fab fa-facebook"></i>';
-    this.$faceBook.href = "https://vi-vn.facebook.com/";
-    this.$twitter.innerHTML = '<i class="fab fa-twitter"></i>';
-    this.$twitter.href = "https://twitter.com/i/flow/login";
-    this.$google.innerHTML = '<i class="fab fa-google"></i>';
-    this.$google.href = "https://accounts.google.com/";
 
+    this.$facebook.appendChild(this.$imgFaceBook);
+    this.$facebook.href = "https://vi-vn.facebook.com/";
+
+    this.$twitter.appendChild(this.$imgTwitter);
+    this.$twitter.href = "https://twitter.com/i/flow/login";
+
+    this.$google.appendChild(this.$imgGoogle);
+    this.$google.href = "https://accounts.google.com/";
 
     this.$email = new InputComponent("Email", "email", " ", "email");
     this.$password = new InputComponent(
@@ -127,8 +141,8 @@ class LoginScreen {
       this.$socials
     );
     this.$socials.append(
-      this.$lableSocial,
-      this.$faceBook,
+      this.$labelSocial,
+      this.$facebook,
       this.$twitter,
       this.$google
     );

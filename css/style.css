@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 
 * {
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -470,7 +470,11 @@ body {
   background-color: white;
   color: black;
   justify-content: center;
-  border-radius: 15px;
+  border-radius: 100%;
+  display: flex;
+  width: 30px;
+  height: 35px;
+  text-align: center;
 }
 
 .btn-logout:hover {
@@ -502,7 +506,6 @@ body {
   line-height: 36px;
   width: 40px;
   font-size: 18px;
-  color: #00a8ff;
   border: 1px solid #efefef;
   border-radius: 20%;
   margin: 0px 10px;
@@ -513,6 +516,6 @@ body {
 .socials a:hover {
   cursor: pointer;
   color: whitesmoke;
-  background-color: #00a8ff;
+  background-color: #ffffff;
   border-color: #00a8ff;
 }

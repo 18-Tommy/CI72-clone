@@ -48,12 +48,18 @@ class LoginScreen {
     this.$twitter = document.createElement("a");
     this.$google = document.createElement("a");
 
-    this.$email = new InputComponent(
-      "Email",
-      "email",
-      " ",
-      "email"
-    );
+    this.$lableSocial.innerHTML = "Or login with";
+
+    this.$socials.classList.add("socials");
+    this.$faceBook.innerHTML = '<i class="fab fa-facebook"></i>';
+    this.$faceBook.href = "https://vi-vn.facebook.com/";
+    this.$twitter.innerHTML = '<i class="fab fa-twitter"></i>';
+    this.$twitter.href = "https://twitter.com/i/flow/login";
+    this.$google.innerHTML = '<i class="fab fa-google"></i>';
+    this.$google.href = "https://accounts.google.com/";
+
+
+    this.$email = new InputComponent("Email", "email", " ", "email");
     this.$password = new InputComponent(
       "Password",
       "password",
@@ -117,7 +123,14 @@ class LoginScreen {
       this.$email.render(),
       this.$password.render(),
       this.$btnSubmit.render(),
-      this.$link
+      this.$link,
+      this.$socials
+    );
+    this.$socials.append(
+      this.$lableSocial,
+      this.$faceBook,
+      this.$twitter,
+      this.$google
     );
     this.$container.appendChild(this.$formLogin);
 

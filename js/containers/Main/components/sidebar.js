@@ -17,6 +17,7 @@ class sideBarComponent {
 
   $title;
   $buttonCreate;
+  $formLogOut;
   $buttonLogOut;
   $logOutImg;
   $modal;
@@ -50,12 +51,15 @@ class sideBarComponent {
     this.$listContainer = document.createElement("div");
     this.$listContainer.classList.add("cs-list");
 
+    this.$formLogOut = document.createElement("div");
+    this.$formLogOut.classList.add("form-logout");
     this.$buttonLogOut = document.createElement("button");
     this.$buttonLogOut.classList.add("btn-logout");
     this.$logOutImg = document.createElement("img");
     this.$logOutImg.setAttribute("src", "../../../images/logout.png");
     this.$logOutImg.setAttribute("style", "width: 20px; height: 20px");
     this.$buttonLogOut.appendChild(this.$logOutImg);
+    this.$formLogOut.appendChild(this.$buttonLogOut);
     this.$buttonLogOut.addEventListener("click", this.handleLogOut);
 
     this.renderModal();
@@ -260,7 +264,7 @@ class sideBarComponent {
       this.$buttonCreate,
       this.$listContainer,
       this.$modal, //for this modal, we can put it anywhere in render
-      this.$buttonLogOut
+      this.$formLogOut
     );
     
 

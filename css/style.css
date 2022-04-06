@@ -14,20 +14,20 @@ body {
   color: #212529;
   text-align: left;
   height: 100%;
-  background-image: url("../images/background3.jpg");
+  background-image: url("../images/background4.jpg");
   animation: change 15s infinite ease-in-out;
   background-size: cover;
 }
 
 @keyframes change {
   30% {
-    background-image: url("../images/background1.jpg");
+    background-image: url("../images/background5.jpg");
   }
   60% {
-    background-image: url("../images/background2.jpg");
+    background-image: url("../images/background6.jpg");
   }
   90% {
-    background-image: url("../images/background3.jpg");
+    background-image: url("../images/background4.jpg");
     background-size: cover;
   }
 }
@@ -224,7 +224,7 @@ body {
   position: absolute;
   top: 20px;
   right: 10px;
-  line-height: 30px; /* if we set this attribute equal to the height, the text will be in the middle  */
+  line-height: 25px; /* if we set this attribute equal to the height, the text will be in the middle  */
   font-size: 30px;
   border: 1.5px solid linear-gradient(120deg, #6acde6 0%, #d5e9d7 100%);
   transition: all 0.25s ease-out;
@@ -465,23 +465,28 @@ body {
   border-radius: 100%;
   border: 1px solid rgb(207, 207, 207);
 }
+.form-logout{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+}
 
 .btn-logout {
   background-color: white;
   color: black;
-  justify-content: center;
-  border-radius: 100%;
-  display: flex;
+  border-radius: 50%;
   width: 30px;
-  height: 35px;
-  text-align: center;
+  height: 30px;
+  position: absolute;
+  line-height: 5px;
 }
 
 .btn-logout:hover {
   background-color: #947e50;
   color: white;
   justify-content: center;
-  border-radius: 15px;
+  border-radius: 50px;
 }
 
 .msg-item-right {
